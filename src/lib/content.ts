@@ -13,7 +13,9 @@ export interface PostFrontmatter {
   author: string;
   date: string;
   tags?: string[];
-  [key: string]: unknown; // allows category-specific fields (region, artist, cuisine, etc.)
+  cuisine?: string;
+  artist?: string;
+  region?: string;
 }
 
 export interface Post extends PostFrontmatter {
@@ -57,10 +59,10 @@ export function getPostBySlug(category: Category, slug: string): Post | null {
   const { data, content } = matter(raw);
 
   return {
+    ...(data as PostFrontmatter),
     slug,
     category,
     content,
-    ...(data as PostFrontmatter),
   };
 }
 
