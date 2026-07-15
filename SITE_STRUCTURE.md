@@ -43,8 +43,33 @@ Homepage
 - **To add a new branch** (e.g. a 4th top-level section): create `content/<new>/`,
   copy the `travel` page/detail-page pair, and add a `CategoryCard` on the homepage.
 
+## Bilingual Content
+
+Every post can carry `title_bn` / `excerpt_bn` frontmatter fields alongside the
+required English `title` / `excerpt`. Bangla renders first (primary), English
+second (secondary, smaller) across cards, headers, and detail pages. Bangla
+text uses the `.font-bangla` utility class (SolaimanLipi → AdorshoLipi → Noto
+Sans Bengali fallback — see `public/fonts/README.md` and `globals.css`).
+
+## Music Subsections — Implemented
+
+The `/music` page now groups posts by a `type` frontmatter field into three
+subsections matching the tree above:
+
+| type              | Section (Bangla)     | Section (English)        |
+|-------------------|-----------------------|---------------------------|
+| `bangla-folk`     | বাংলা লোকগান         | Bangla Folk — Lyrics & Sargam |
+| `learning`        | শেখার বিভাগ           | Learning Section (Dotara/Tabla) |
+| `artist-history`  | শিল্পীদের ইতিহাস     | Artist History             |
+
+Add a new post to any of these by setting `type:` in its frontmatter — no page
+code changes needed. The same pattern can be applied to `/travel` and `/food`
+later using their own `type` values (e.g. `destination`, `visa-help`,
+`old-traditional`, `new-generation`).
+
 ## Change Log
 
-| Date       | Change                                      |
-|------------|----------------------------------------------|
-| 2026-07-14 | Initial structure drafted from outline        |
+| Date       | Change                                                        |
+|------------|-----------------------------------------------------------------|
+| 2026-07-14 | Initial structure drafted from outline                          |
+| 2026-07-15 | Bangla-first bilingual UI + Music subsections (type-based) added |

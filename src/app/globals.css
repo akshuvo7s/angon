@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* --- Bangla fonts ---
+   Drop the actual font files into /public/fonts (see public/fonts/README.md).
+   Until then, these @font-face rules simply won't match anything and the
+   site falls back to Noto Sans Bengali (loaded via next/font in layout.tsx). */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("/fonts/SolaimanLipi.woff2") format("woff2"),
+    url("/fonts/SolaimanLipi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AdorshoLipi";
+  src: url("/fonts/AdorshoLipi.woff2") format("woff2"),
+    url("/fonts/AdorshoLipi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Bangla text stack: SolaimanLipi > AdorshoLipi > Noto Sans Bengali (Google, always available) */
+  --font-bangla: "SolaimanLipi", "AdorshoLipi", var(--font-noto-bengali),
+    sans-serif;
+}
+
+.font-bangla {
+  font-family: var(--font-bangla);
+}

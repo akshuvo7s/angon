@@ -1,6 +1,8 @@
 ---
 title: "Panta Ilish: The Taste of Pohela Boishakh"
+title_bn: "পান্তা ইলিশ: পহেলা বৈশাখের স্বাদ"
 excerpt: "The story and recipe behind Bengal's most iconic New Year dish."
+excerpt_bn: "বাংলার সবচেয়ে পরিচিত নববর্ষের পদের গল্প আর রেসিপি।"
 coverImage: "/images/food/panta-ilish.jpg"
 author: "Ahammad Shuvo"
 date: "2026-04-05"

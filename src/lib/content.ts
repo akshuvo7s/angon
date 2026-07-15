@@ -7,13 +7,16 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 export type Category = "travel" | "music" | "food";
 
 export interface PostFrontmatter {
-  title: string;
-  excerpt: string;
+  title: string; // English title
+  title_bn?: string; // Bangla title (shown first / primary)
+  excerpt: string; // English excerpt
+  excerpt_bn?: string; // Bangla excerpt (shown first / primary)
   coverImage?: string;
   author: string;
   date: string;
   tags?: string[];
-  [key: string]: unknown; // allows category-specific fields (region, artist, cuisine, etc.)
+  type?: string; // subsection tag, e.g. "bangla-folk" | "learning" | "artist-history"
+  [key: string]: unknown; // allows category-specific fields (region, artist, cuisine, instrument, etc.)
 }
 
 export interface Post extends PostFrontmatter {

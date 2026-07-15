@@ -1,6 +1,8 @@
 ---
 title: "Ratargul Swamp Forest: The Amazon of Bangladesh"
+title_bn: "রাতারগুল জলাবন: বাংলাদেশের আমাজন"
 excerpt: "A guide to exploring Sylhet's freshwater swamp forest, one of the few of its kind in the world."
+excerpt_bn: "সিলেটের মিঠাপানির জলাবন ঘুরে দেখার একটি গাইড — বিশ্বে যার নজির খুব কম আছে।"
 coverImage: "/images/travel/ratargul.jpg"
 author: "Ahammad Shuvo"
 date: "2026-03-12"
