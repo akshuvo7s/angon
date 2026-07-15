@@ -19,13 +19,14 @@ export interface PostFrontmatter {
   [key: string]: unknown; // allows category-specific fields (region, artist, cuisine, instrument, etc.)
 }
 
-export interface Post extends PostFrontmatter {
+export interface PostSummary extends PostFrontmatter {
   slug: string;
   category: Category;
-  content: string;
 }
 
-export type PostSummary = Omit<Post, "content">;
+export interface Post extends PostSummary {
+  content: string;
+}
 
 /**
  * Returns the absolute path for a given category's content folder.
